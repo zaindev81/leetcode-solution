@@ -79,7 +79,7 @@ def test_solution():
     print(f"Expected: [7,0,8] (807)")
     assert result_list == [7, 0, 8], f"Expected [7,0,8], got {result_list}"
     print("✅ PASS\n")
-    
+
     # Test case 2: Example 2 from problem
     print("=== Test 2: [0] + [0] ===")
     l1 = create_linked_list([0])
