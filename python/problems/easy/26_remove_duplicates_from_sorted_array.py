@@ -22,6 +22,7 @@ class Solution:
         
         return left
 
+
 # nums = [0,0,1,1,1,2,2,3,3,4]
 # right=1: 0 == 0 → skip
 # right=2: 1 != 0 → nums[1]=1, left=2
