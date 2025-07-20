@@ -1,4 +1,20 @@
-from typing import List
+from typing import List, Optional
+
+# Utils
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+    def __repr__(self):
+        """String representation for easy debugging"""
+        result = []
+        current = self
+        while current:
+            result.append(str(current.val))
+            current = current.next
+        return " -> ".join(result)
+
 
 # 1
 class TwoSum:
@@ -14,6 +30,28 @@ class Palindrome:
 class RomanToInteger:
     def romanToInt(self, s: str) -> int:
         return False
+
+# 14
+class LongestCommonPrefix:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        return False
+
+# 15
+class ValidParentheses:
+    def isValid(self, s: str) -> bool:
+        return False
+
+# 21
+class MergeTwoSortedList:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        return False
+
+
+# 26
+class RemoveDuplicatesFromSortedArray:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        return False
+
 
 
 def test_two_sum():
