@@ -1,5 +1,3 @@
-from typing import List
-
 # https://leetcode.com/problems/valid-parentheses
 class Solution:
     def isValid(self, s: str) -> bool:
@@ -14,7 +12,13 @@ class Solution:
         }
         
         for char in s:
+            # print(f"Processing character: '{char}'")
+
             if char in bracket_map:  # It's a closing bracket
+                # print(f"Found closing bracket: '{char}'")
+                # print(f"Current stack: {stack}")
+                # print(f"Expected opening bracket: '{bracket_map[char]}'")
+
                 # Check if stack is empty or top doesn't match
                 if not stack or stack.pop() != bracket_map[char]:
                     return False

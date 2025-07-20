@@ -41,7 +41,6 @@ class Solution:
         return dummy.next
 
 
-
 # Helper functions for testing
 def create_linked_list(nums):
     """Create a linked list from a list of numbers"""
