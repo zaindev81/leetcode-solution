@@ -9,14 +9,14 @@ class Solution:
         # Two pointers: 
         # - left: position for next unique element
         # - right: scanning pointer
-        left = 1  # First element is always unique
+        left = 1  # First element is always unique -> from second element
         
         for right in range(1, len(nums)):
             # print(f"Checking nums[{right}] = {nums[right]} against nums[{left - 1}] = {nums[left - 1]}")
             print(f"Current nums: {nums}")
 
             # If current element is different from previous
-            if nums[right] != nums[right - 1]:
+            if nums[right] != nums[right - 1]: # if nums[right] != nums[left]:
                 nums[left] = nums[right]
                 left += 1
         

@@ -1,6 +1,12 @@
 from typing import List, Optional
 
 # Utils
+# ┌─────┐     ┌─────┐     ┌─────┐
+# │ val │ →→→ │ val │ →→→ │ val │
+# │  1  │     │  2  │     │  3  │
+# └─────┘     └─────┘     └─────┘
+# A linked list is a data structure in which elements (called nodes) are connected in sequence, with each node pointing to the next one.
+# It may look similar to Python’s built-in list [], but it allows for faster insertion and deletion operations, and it works even when the nodes are scattered in memory.
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -40,12 +46,12 @@ class ValidParentheses:
     def isValid(self, s: str) -> bool:
         return False
 
-# 21
+# 21 => x
 class MergeTwoSortedList:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         return False
 
-# 26 => x
+# 26 => 
 class RemoveDuplicatesFromSortedArray:
     def removeDuplicates(self, nums: List[int]) -> int:
         return False
@@ -118,6 +124,39 @@ def test_roman_to_integer():
         status = "✓" if result == expected else "✗"
         print(f"{status} {roman:>8} = {result:>4} (expected: {expected})")
 
+
+def test_remove_duplicates():
+    """Test the function with various cases."""
+    sol = RemoveDuplicatesFromSortedArray()
+
+    test_cases = [
+        ([1, 1, 2], 2, [1, 2]),
+        ([0, 0, 1, 1, 1, 2, 2, 3, 3, 4], 5, [0, 1, 2, 3, 4]),
+        ([1], 1, [1]),
+        ([1, 1, 1], 1, [1]),
+        ([1, 2, 3, 4, 5], 5, [1, 2, 3, 4, 5]),
+        ([1, 1, 2, 2, 3, 3], 3, [1, 2, 3]),
+        ([-1, 0, 0, 0, 3, 3], 3, [-1, 0, 3])
+    ]
+    
+    print("Testing Remove Duplicates from Sorted Array:")
+    print("=" * 70)
+    print(f"{'Input':<25} {'Expected K':<12} {'Result K':<10} {'First K Elements':<20} {'Status'}")
+    print("=" * 70)
+    
+    for original_nums, expected_k, expected_unique in test_cases:
+        # Test main solution
+        nums = original_nums.copy()  # Don't modify original
+        result_k = sol.removeDuplicates(nums)
+        result_unique = nums[:result_k]
+        
+        status = "✓" if result_k == expected_k and result_unique == expected_unique else "✗"
+        
+        print(f"{str(original_nums):<25} {expected_k:<12} {result_k:<10} "
+              f"{str(result_unique):<20} {status}")
+    
+    print("=" * 70)
+
 def test_remove_element():
     sol = RemoveElement()
     
@@ -159,6 +198,7 @@ if __name__ == "__main__":
     # test_two_sum()
     # test_palindrome()
 
-    test_remove_element();
-    test_find_the_index_of_the_first();
-    test_search_insert_position()
+    test_remove_duplicates()
+    # test_remove_element()
+    # test_find_the_index_of_the_first()
+    # test_search_insert_position()

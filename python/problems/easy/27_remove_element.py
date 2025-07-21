@@ -9,16 +9,16 @@ class Solution:
         Time Complexity: O(n)
         Space Complexity: O(1)
         """
-        write_index = 0  # Position to write the next valid element
+        index = 0  # Position to write the next valid element
         
         # Iterate through the array
         for i in range(len(nums)):
             # If current element is not equal to val, keep it
             if nums[i] != val:
-                nums[write_index] = nums[i]
-                write_index += 1
+                nums[index] = nums[i]
+                index += 1
         
-        return write_index
+        return index
 
 
 def test_solution():

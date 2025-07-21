@@ -36,6 +36,8 @@ class Solution:
         # for i in range(max_start + 1):
         #     if haystack[i:i + len(needle)] == needle:
         #     return i
+        
+        # maxStart = len(haystack) - len(needle) + 1
         for i in range(len(haystack) - len(needle) + 1):
             # Check if substring starting at i matches needle
             # str = abcde
