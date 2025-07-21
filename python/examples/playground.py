@@ -45,7 +45,7 @@ class MergeTwoSortedList:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         return False
 
-# 26
+# 26 => x
 class RemoveDuplicatesFromSortedArray:
     def removeDuplicates(self, nums: List[int]) -> int:
         return False
@@ -55,9 +55,14 @@ class RemoveElement:
     def removeElement(self, nums: List[int], val: int) -> int:
         return False
 
-# 28
+# 28 ->
 class FindTheIndexOfTheFirst:
     def strStr(self, haystack: str, needle: str) -> int:
+        return False
+
+# 35 -> 
+class SearchInsertPosition:
+    def searchInsert(self, nums: List[int], target: int) -> int:
         return False
 
 def test_two_sum():
@@ -133,6 +138,19 @@ def test_find_the_index_of_the_first():
     print(f"Test 1: haystack='{haystack1}', needle='{needle1}' -> {result1}")
     assert result1 == 0
 
+def test_search_insert_position():
+    sol = SearchInsertPosition()
+    
+    # Test case 1: target found
+    nums1 = [1, 3, 5, 6]
+    target1 = 5
+    result1 = sol.searchInsert(nums1, target1)
+    print(f"nums = {nums1}, target = {target1}")
+    print(f"Output: {result1}")
+    print(f"Expected: 2")
+    print()
+
+
 if __name__ == "__main__":
     print("=" * 40)
     print("playground")
@@ -140,6 +158,7 @@ if __name__ == "__main__":
 
     # test_two_sum()
     # test_palindrome()
-    # test_remove_element();
-    test_find_the_index_of_the_first();
 
+    test_remove_element();
+    test_find_the_index_of_the_first();
+    test_search_insert_position()

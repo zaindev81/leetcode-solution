@@ -28,10 +28,24 @@ class Solution:
         # haystack = hello
         # needle   = ll
         # 0,1,2,3
+
+        # print(len(haystack) - len(needle) + 1)
+        # haystack:  s  a  d  b  u  t  s  a  d
+        # index:     0  1  2  3  4  5  6  7  8
+        # max_start = len(haystack) - len(needle)
+        # for i in range(max_start + 1):
+        #     if haystack[i:i + len(needle)] == needle:
+        #     return i
         for i in range(len(haystack) - len(needle) + 1):
             # Check if substring starting at i matches needle
             # str = abcde
             # str[1:2] = b
+
+            # ex.
+            # sadbutsad => 9
+            # sad => 3
+            # print(i)
+            # 6:6
             if haystack[i:i + len(needle)] == needle:
                 return i
         
