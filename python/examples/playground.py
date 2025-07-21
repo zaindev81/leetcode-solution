@@ -15,7 +15,6 @@ class ListNode:
             current = current.next
         return " -> ".join(result)
 
-
 # 1
 class TwoSum:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -46,13 +45,20 @@ class MergeTwoSortedList:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         return False
 
-
 # 26
 class RemoveDuplicatesFromSortedArray:
     def removeDuplicates(self, nums: List[int]) -> int:
         return False
 
+# 27
+class RemoveElement:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        return False
 
+# 28
+class FindTheIndexOfTheFirst:
+    def strStr(self, haystack: str, needle: str) -> int:
+        return False
 
 def test_two_sum():
     sol = TwoSum()
@@ -107,7 +113,33 @@ def test_roman_to_integer():
         status = "✓" if result == expected else "✗"
         print(f"{status} {roman:>8} = {result:>4} (expected: {expected})")
 
+def test_remove_element():
+    sol = RemoveElement()
+    
+    # Test Case 1
+    nums1 = [3, 2, 2, 3]
+    val1 = 3
+    k1 = sol.removeElement(nums1, val1)
+    print(f"Test 1: nums = {nums1[:k1]}, k = {k1}")
+    assert k1 == 2
+    assert sorted(nums1[:k1]) == [2, 2]
+
+def test_find_the_index_of_the_first():
+    sol = FindTheIndexOfTheFirst()
+
+    haystack1 = "sadbutsad"
+    needle1 = "sad"
+    result1 = sol.strStr(haystack1, needle1)
+    print(f"Test 1: haystack='{haystack1}', needle='{needle1}' -> {result1}")
+    assert result1 == 0
+
 if __name__ == "__main__":
+    print("=" * 40)
     print("playground")
+    print("=" * 40)
+
     # test_two_sum()
     # test_palindrome()
+    # test_remove_element();
+    test_find_the_index_of_the_first();
+
