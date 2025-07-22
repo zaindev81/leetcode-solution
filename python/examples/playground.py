@@ -21,7 +21,7 @@ class ListNode:
             current = current.next
         return " -> ".join(result)
 
-# 1
+# 1 => x
 class TwoSum:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         return False
@@ -70,6 +70,7 @@ class FindTheIndexOfTheFirst:
 class SearchInsertPosition:
     def searchInsert(self, nums: List[int], target: int) -> int:
         return False
+
 
 def test_two_sum():
     sol = TwoSum()
@@ -181,14 +182,22 @@ def test_search_insert_position():
     sol = SearchInsertPosition()
     
     # Test case 1: target found
-    nums1 = [1, 3, 5, 6]
-    target1 = 5
-    result1 = sol.searchInsert(nums1, target1)
-    print(f"nums = {nums1}, target = {target1}")
-    print(f"Output: {result1}")
-    print(f"Expected: 2")
-    print()
+    # nums1 = [1, 3, 5, 6]
+    # target1 = 5
+    # result1 = sol.searchInsert(nums1, target1)
+    # print(f"nums = {nums1}, target = {target1}")
+    # print(f"Output: {result1}")
+    # print(f"Expected: 2")
+    # print()
 
+    # Test case 2: target not found, insert in middle
+    nums2 = [1, 3, 5, 6]
+    target2 = 2
+    result2 = sol.searchInsert(nums2, target2)
+    print(f"nums = {nums2}, target = {target2}")
+    print(f"Output: {result2}")
+    print(f"Expected: 1")
+    print()
 
 if __name__ == "__main__":
     print("=" * 40)
@@ -198,7 +207,7 @@ if __name__ == "__main__":
     # test_two_sum()
     # test_palindrome()
 
-    test_remove_duplicates()
+    # test_remove_duplicates()
     # test_remove_element()
     # test_find_the_index_of_the_first()
     # test_search_insert_position()

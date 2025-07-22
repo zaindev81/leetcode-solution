@@ -11,7 +11,7 @@ class Solution:
 
             # a + b = target
             # b = target - a
-            complement = target - num
+            complement = target - num # pair_number
 
             if complement in num_to_index:
                 return [num_to_index[complement], i]
@@ -20,6 +20,14 @@ class Solution:
 
         return []
 
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
+#         for i in range(len(nums)):
+#             for j in range(i + 1, len(nums)):
+#                 if nums[j] == target - nums[i]:
+#                     return [i, j]
+#         # Return an empty list if no solution is found
+#         return []
 
 def test_solution():
     sol = Solution()
