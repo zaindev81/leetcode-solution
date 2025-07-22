@@ -46,12 +46,12 @@ class ValidParentheses:
     def isValid(self, s: str) -> bool:
         return False
 
-# 21 => x
+# 21 -> x
 class MergeTwoSortedList:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         return False
 
-# 26 => 
+# 26 -> 
 class RemoveDuplicatesFromSortedArray:
     def removeDuplicates(self, nums: List[int]) -> int:
         return False
@@ -61,12 +61,12 @@ class RemoveElement:
     def removeElement(self, nums: List[int], val: int) -> int:
         return False
 
-# 28 ->
+# 28 -> o
 class FindTheIndexOfTheFirst:
     def strStr(self, haystack: str, needle: str) -> int:
         return False
 
-# 35 -> 
+# 35 -> o
 class SearchInsertPosition:
     def searchInsert(self, nums: List[int], target: int) -> int:
         return False
