@@ -8,9 +8,13 @@ class Solution:
         print("left", left)
         print("right", right)
 
+        # 0,1,2
+        # 0,1,2,3,4,5
+
         # binary search
         while left <= right:
             # ex. 0 + 4
+            # mid = (left + right) // 2 => prevent overflow
             mid = left + (right - left) // 2
 
             print("mid", mid)

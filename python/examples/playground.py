@@ -21,7 +21,7 @@ class ListNode:
             current = current.next
         return " -> ".join(result)
 
-# 1 => x
+# 1 => xx
 class TwoSum:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         return False
@@ -56,17 +56,17 @@ class RemoveDuplicatesFromSortedArray:
     def removeDuplicates(self, nums: List[int]) -> int:
         return False
 
-# 27
+# 27 => x
 class RemoveElement:
     def removeElement(self, nums: List[int], val: int) -> int:
         return False
 
-# 28 -> o
+# 28 => oo
 class FindTheIndexOfTheFirst:
     def strStr(self, haystack: str, needle: str) -> int:
         return False
 
-# 35 -> o
+# 35 => ox
 class SearchInsertPosition:
     def searchInsert(self, nums: List[int], target: int) -> int:
         return False
@@ -182,13 +182,13 @@ def test_search_insert_position():
     sol = SearchInsertPosition()
     
     # Test case 1: target found
-    # nums1 = [1, 3, 5, 6]
-    # target1 = 5
-    # result1 = sol.searchInsert(nums1, target1)
-    # print(f"nums = {nums1}, target = {target1}")
-    # print(f"Output: {result1}")
-    # print(f"Expected: 2")
-    # print()
+    nums1 = [1, 3, 5, 6]
+    target1 = 5
+    result1 = sol.searchInsert(nums1, target1)
+    print(f"nums = {nums1}, target = {target1}")
+    print(f"Output: {result1}")
+    print(f"Expected: 2")
+    print()
 
     # Test case 2: target not found, insert in middle
     nums2 = [1, 3, 5, 6]
