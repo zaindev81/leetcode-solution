@@ -21,7 +21,7 @@ class ListNode:
             current = current.next
         return " -> ".join(result)
 
-# 1 => xx
+# 1 => xxo
 class TwoSum:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         return False
@@ -51,7 +51,7 @@ class MergeTwoSortedList:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         return False
 
-# 26 -> 
+# 26 ->
 class RemoveDuplicatesFromSortedArray:
     def removeDuplicates(self, nums: List[int]) -> int:
         return False
@@ -139,28 +139,28 @@ def test_remove_duplicates():
         ([1, 1, 2, 2, 3, 3], 3, [1, 2, 3]),
         ([-1, 0, 0, 0, 3, 3], 3, [-1, 0, 3])
     ]
-    
+
     print("Testing Remove Duplicates from Sorted Array:")
     print("=" * 70)
     print(f"{'Input':<25} {'Expected K':<12} {'Result K':<10} {'First K Elements':<20} {'Status'}")
     print("=" * 70)
-    
+
     for original_nums, expected_k, expected_unique in test_cases:
         # Test main solution
         nums = original_nums.copy()  # Don't modify original
         result_k = sol.removeDuplicates(nums)
         result_unique = nums[:result_k]
-        
+
         status = "✓" if result_k == expected_k and result_unique == expected_unique else "✗"
-        
+
         print(f"{str(original_nums):<25} {expected_k:<12} {result_k:<10} "
               f"{str(result_unique):<20} {status}")
-    
+
     print("=" * 70)
 
 def test_remove_element():
     sol = RemoveElement()
-    
+
     # Test Case 1
     nums1 = [3, 2, 2, 3]
     val1 = 3
@@ -180,7 +180,7 @@ def test_find_the_index_of_the_first():
 
 def test_search_insert_position():
     sol = SearchInsertPosition()
-    
+
     # Test case 1: target found
     nums1 = [1, 3, 5, 6]
     target1 = 5
@@ -210,4 +210,4 @@ if __name__ == "__main__":
     # test_remove_duplicates()
     # test_remove_element()
     # test_find_the_index_of_the_first()
-    # test_search_insert_position()
+    test_search_insert_position()
