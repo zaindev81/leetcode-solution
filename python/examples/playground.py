@@ -21,7 +21,7 @@ class ListNode:
             current = current.next
         return " -> ".join(result)
 
-# 1 => xxo
+# 1 => xxoo
 class TwoSum:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         return False
@@ -56,21 +56,20 @@ class RemoveDuplicatesFromSortedArray:
     def removeDuplicates(self, nums: List[int]) -> int:
         return False
 
-# 27 => x
+# 27 => xx
 class RemoveElement:
     def removeElement(self, nums: List[int], val: int) -> int:
         return False
 
-# 28 => oo
+# 28 => ooo
 class FindTheIndexOfTheFirst:
     def strStr(self, haystack: str, needle: str) -> int:
         return False
 
-# 35 => ox
+# 35 => oxo
 class SearchInsertPosition:
     def searchInsert(self, nums: List[int], target: int) -> int:
         return False
-
 
 def test_two_sum():
     sol = TwoSum()
@@ -209,5 +208,5 @@ if __name__ == "__main__":
 
     # test_remove_duplicates()
     # test_remove_element()
-    # test_find_the_index_of_the_first()
+    test_find_the_index_of_the_first()
     test_search_insert_position()
