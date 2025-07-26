@@ -4,7 +4,7 @@ from typing import List
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         left, right = 0, len(nums) - 1
-        
+
         print("left", left)
         print("right", right)
 
@@ -18,20 +18,20 @@ class Solution:
             mid = left + (right - left) // 2
 
             print("mid", mid)
-            
+
             if nums[mid] == target:
                 return mid
             elif nums[mid] < target:
                 left = mid + 1 # right side
             else:
                 right = mid - 1 # left side
-        
+
         # If target is not found, left will be the insertion position
         return left
 
 def test_solution():
     sol = Solution()
-    
+
     # Test case 1: target found
     nums1 = [1, 3, 5, 6]
     target1 = 5
@@ -40,7 +40,7 @@ def test_solution():
     print(f"Output: {result1}")
     print(f"Expected: 2")
     print()
-    
+
     # Test case 2: target not found, insert in middle
     nums2 = [1, 3, 5, 6]
     target2 = 2
@@ -49,7 +49,7 @@ def test_solution():
     print(f"Output: {result2}")
     print(f"Expected: 1")
     print()
-    
+
     # Test case 3: target not found, insert at end
     nums3 = [1, 3, 5, 6]
     target3 = 7
@@ -58,7 +58,7 @@ def test_solution():
     print(f"Output: {result3}")
     print(f"Expected: 4")
     print()
-    
+
     # Additional test cases
     # Test case 4: target smaller than all elements
     nums4 = [1, 3, 5, 6]
@@ -68,7 +68,7 @@ def test_solution():
     print(f"Output: {result4}")
     print(f"Expected: 0")
     print()
-    
+
     # Test case 5: single element array, target found
     nums5 = [1]
     target5 = 1
