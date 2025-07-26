@@ -21,17 +21,17 @@ class ListNode:
             current = current.next
         return " -> ".join(result)
 
-# 1 => xxoo
+# 1 => xxooo
 class TwoSum:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         return False
 
-# 9
+# 9 => oo
 class Palindrome:
     def isPalindrome(self, x: int) -> bool:
         return False
 
-# 13
+# 13 =>
 class RomanToInteger:
     def romanToInt(self, s: str) -> int:
         return False
@@ -208,5 +208,5 @@ if __name__ == "__main__":
 
     # test_remove_duplicates()
     # test_remove_element()
-    test_find_the_index_of_the_first()
-    test_search_insert_position()
+    # test_find_the_index_of_the_first()
+    # test_search_insert_position()

@@ -13,6 +13,10 @@
 # print(s[1::2])  # 'bdf'     (every second character starting from index 1)
 # print(s[-1])    # 'f'       (last character)
 
+# s[start:end:step]
+# s[:] 'abcdef'
+# s[::-1] 'fedcba'
+
 """
 Python Lists (Arrays) - Comprehensive Guide
 ===========================================

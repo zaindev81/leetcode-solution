@@ -62,7 +62,7 @@ def test_solution():
     print("\n=== Algorithm Explanation ===")
     print("Optimal approach works by reversing only half the number:")
     print("1. For 1221: reverse half until x=12, reversed=12 → equal ✓")
-    print("2. For 12321: reverse half until x=12, reversed=123 → x == reversed//10 ✓") 
+    print("2. For 12321: reverse half until x=12, reversed=123 → x == reversed//10 ✓")
     print("3. For 123: reverse half until x=1, reversed=32 → not equal ✗")
 
     # Demonstrate step-by-step for a test case
