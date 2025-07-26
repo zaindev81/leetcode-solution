@@ -31,7 +31,7 @@ class Palindrome:
     def isPalindrome(self, x: int) -> bool:
         return False
 
-# 13 =>
+# 13 => x
 class RomanToInteger:
     def romanToInt(self, s: str) -> int:
         return False
@@ -107,15 +107,15 @@ def test_palindrome():
 
 def test_roman_to_integer():
     test_cases = [
-        # ("III", 3),
-        # ("LVIII", 58),
-        # ("MCMXCIV", 1994),
+        ("III", 3),
+        ("LVIII", 58),
+        ("MCMXCIV", 1994),
         ("IV", 4),
         ("IX", 9),
-        # ("XL", 40),
-        # ("XC", 90),
-        # ("CD", 400),
-        # ("CM", 900)
+        ("XL", 40),
+        ("XC", 90),
+        ("CD", 400),
+        ("CM", 900)
     ]
 
     sol = RomanToInteger()
@@ -123,7 +123,6 @@ def test_roman_to_integer():
         result = sol.romanToInt(roman)
         status = "✓" if result == expected else "✗"
         print(f"{status} {roman:>8} = {result:>4} (expected: {expected})")
-
 
 def test_remove_duplicates():
     """Test the function with various cases."""
@@ -205,6 +204,7 @@ if __name__ == "__main__":
 
     # test_two_sum()
     # test_palindrome()
+    test_roman_to_integer()
 
     # test_remove_duplicates()
     # test_remove_element()

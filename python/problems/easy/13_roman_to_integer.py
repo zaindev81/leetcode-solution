@@ -18,17 +18,26 @@ class Solution:
             current_val = roman_map[s[i]]
 
             # Check if this is the last character or if current value >= next value
-            print("Current character:", s[i], "Value:", current_val)
-            if i != len(s) - 1:
-                print("Next character:", s[i + 1], "Value:", roman_map[s[i + 1]])
+            # print("Current character:", s[i], "Value:", current_val)
 
+            # if i != len(s) - 1:
+            #     print("Next character:", s[i + 1], "Value:", roman_map[s[i + 1]])
+
+            # is_last = i == len(s) - 1
+            # next_val = roman_map[s[i + 1]] => ex
+            # if i == is_last or current_val >= next_val:
+                # total += current_val
+            # else:
+                # total -= current_val
+
+
+            # if last character or current_val > next_val
             if i == len(s) - 1 or current_val >= roman_map[s[i + 1]]:
                 # add current value to total
                 total += current_val
             else:
                 # subtract current value from total
                 total -= current_val
-
 
         return total
 
@@ -45,7 +54,7 @@ def test_solution():
         # ("CD", 400),
         # ("CM", 900)
     ]
-    
+
     print("Testing Roman to Integer conversion:")
     print("-" * 40)
 
@@ -54,7 +63,7 @@ def test_solution():
         result = sol.romanToInt(roman)
         status = "✓" if result == expected else "✗"
         print(f"{status} {roman:>8} = {result:>4} (expected: {expected})")
-    
+
     print("-" * 40)
 
 
