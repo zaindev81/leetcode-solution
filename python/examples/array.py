@@ -16,6 +16,7 @@
 # s[start:end:step]
 # s[:] 'abcdef'
 # s[::-1] 'fedcba'
+# s[:-1] 'abcde'
 
 """
 Python Lists (Arrays) - Comprehensive Guide
