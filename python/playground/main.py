@@ -21,19 +21,29 @@ class ListNode:
             current = current.next
         return " -> ".join(result)
 
-# 1 => xxooo
+# 1 => xxoooo
 class TwoSum:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         return False
 
-# 9 => oo
+# 9 => ooo
 class Palindrome:
     def isPalindrome(self, x: int) -> bool:
         return False
 
-# 13 => x
+# 13 => xx
 class RomanToInteger:
     def romanToInt(self, s: str) -> int:
+        roman_map = {
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000
+        }
+
         return False
 
 # 14
@@ -112,6 +122,7 @@ def test_roman_to_integer():
         ("MCMXCIV", 1994),
         ("IV", 4),
         ("IX", 9),
+        ("VX", 5),
         ("XL", 40),
         ("XC", 90),
         ("CD", 400),
@@ -123,6 +134,40 @@ def test_roman_to_integer():
         result = sol.romanToInt(roman)
         status = "✓" if result == expected else "✗"
         print(f"{status} {roman:>8} = {result:>4} (expected: {expected})")
+
+def test_longest_common_prefix():
+    sol = LongestCommonPrefix()
+
+    # Test case 1
+    strs1 = ["flower", "flow", "flight"]
+    result1 = sol.longestCommonPrefix(strs1)
+    print(f"Input: {strs1}")
+    print(f"Output: '{result1}'")
+    print(f"Expected: 'fl'")
+    print()
+
+    # Test case 2
+    strs2 = ["dog", "racecar", "car"]
+    result2 = sol.longestCommonPrefix(strs2)
+    print(f"Input: {strs2}")
+    print(f"Output: '{result2}'")
+    print(f"Expected: ''")
+    print()
+
+    # Additional test cases
+    test_cases = [
+        [""],
+        ["a"],
+        ["abc", "abc", "abc"],
+        ["abcdef", "abc", "abcd"],
+        ["", "abc"],
+        ["abc", ""]
+    ]
+
+    print("Additional test cases:")
+    for i, strs in enumerate(test_cases, 3):
+        result = sol.longestCommonPrefix(strs)
+        print(f"Test {i}: {strs} -> '{result}'")
 
 def test_remove_duplicates():
     """Test the function with various cases."""
@@ -204,7 +249,8 @@ if __name__ == "__main__":
 
     # test_two_sum()
     # test_palindrome()
-    test_roman_to_integer()
+    # test_roman_to_integer()
+    test_longest_common_prefix()
 
     # test_remove_duplicates()
     # test_remove_element()
